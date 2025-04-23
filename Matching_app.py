@@ -47,7 +47,7 @@ from PIL import Image
 logo = Image.open("./1cdc3c07-14ea-43d0-a328-77c4f8d8688f.png")
 col1, col2 = st.columns([1,8])
 with col1:
-    st.image("logo@4x.png", width=50)   # source is 200×200, downsized to 50×50
+    st.image(logo, width=50)   # source is 200×200, downsized to 50×50
 with col2:
     st.markdown("## 🔗 Subtitle Matching Web App")
 
