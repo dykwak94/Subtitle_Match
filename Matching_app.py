@@ -42,7 +42,16 @@ def parse_srt_to_df(uploaded_file, lang):
 # -----------------------------------------------------------------------------
 # Streamlit UI
 # -----------------------------------------------------------------------------
-st.title("🔗 Subtitle Matching Web App")
+from PIL import Image
+
+logo = Image.open("./1cdc3c07-14ea-43d0-a328-77c4f8d8688f.png")
+col1, col2 = st.columns([1, 8])  # adjust the ratio as you like
+with col1:
+    st.image(logo, width=100)      # small icon-sized logo
+with col2:
+    st.markdown("## 🔗 Subtitle Matching Web App")  # use ## so it’s a bit smaller than st.title()
+
+st.write("---")  # optional separator
 
 # 1) Upload both SRTs
 eng_file = st.file_uploader("Upload English subtitles (.srt)", type=["srt"])
@@ -188,3 +197,5 @@ if eng_file and kor_file:
                     pass
                 st.session_state.pop('matched')
                 st.info("Matched file deleted.")
+st.markdown("---")  
+st.markdown("Created by Davis K")  
