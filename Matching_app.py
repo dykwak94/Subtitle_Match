@@ -50,6 +50,7 @@ with col1:
     st.image("logo@4x.png", width=50)   # source is 200×200, downsized to 50×50
 with col2:
     st.markdown("## 🔗 Subtitle Matching Web App")
+
 st.write("---")  # optional separator
 
 # 1) Upload both SRTs
